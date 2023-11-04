@@ -14,19 +14,16 @@ const articles = [
     title: 'Brief History',
     imageUrl: imageColumbiaUniversity,
     body: 'We founded Specter Ross in 1970 after graduating Colombia Law School together. Rather than joining a large law firm, we started our own law practice because we both had an entrepreneurial spirit, and we wanted to work with business owners who shared our ambition and drive for success.',
-    person: false,
   },
   {
     title: 'Mike Specter',
     imageUrl: imageMikeSpecter,
     body: 'Lorem ipsum dolor sit amet consectetur. Erat aliquam ut sed cursus amet. Sit cursus vitae diam ac non praesent ullamcorper sollicitudin. Sed amet sed non luctus ipsum placerat purus. Semper arcu tortor nibh eleifend lacus mauris in dolor. Id tellus massa commodo aliquam odio sagittis. Nibh faucibus etiam eros amet id vel metus est id. Accumsan facilisi orci lacus erat et egestas nulla.',
-    person: true,
   },
   {
     title: 'Harvey Ross',
     imageUrl: imageHarveyRoss,
     body: 'Lorem ipsum dolor sit amet consectetur. Erat aliquam ut sed cursus amet. Sit cursus vitae diam ac non praesent ullamcorper sollicitudin. Sed amet sed non luctus ipsum placerat purus. Semper arcu tortor nibh eleifend lacus mauris in dolor. Id tellus massa commodo aliquam odio sagittis. Nibh faucibus etiam eros amet id vel metus est id. Accumsan facilisi orci lacus erat et egestas nulla.',
-    person: true,
   },
 ];
 
@@ -51,15 +48,11 @@ const AboutPage = () => {
       <ul className="flex flex-col lg:hidden">
         {articles.map((article) => (
           <li key={article.title}>
-            <Container className="flex flex-col items-center justify-center gap-6 sm:mt-4 ">
-              <h2 className="order-1 mr-auto mt-16 text-2xl font-medium capitalize sm:text-3xl">
+            <Container className="flex flex-col items-center justify-center gap-6 sm:mt-4">
+              <h2 className="mr-auto mt-16 text-2xl font-medium capitalize sm:text-3xl">
                 {article.title}
               </h2>
-              <div
-                className={`relative aspect-video w-full
-              ${!article.person ? 'order-3' : 'order-2'}
-              `}
-              >
+              <div className="relative aspect-video w-full">
                 <Image
                   src={article.imageUrl}
                   alt=""
@@ -67,9 +60,7 @@ const AboutPage = () => {
                   fill
                 />
               </div>
-              <p className={!article.person ? 'order-2' : 'order-3'}>
-                {article.body}
-              </p>
+              <p>{article.body}</p>
             </Container>
           </li>
         ))}
