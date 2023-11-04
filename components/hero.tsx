@@ -12,7 +12,7 @@ const Hero = () => {
         <source src="/hero-video.mp4" type="video/mp4" />
       </video>
       <div>
-        <h1 className="max-w-xl text-3xl text-white sm:text-5xl md:max-w-2xl lg:max-w-3xl xl:text-7xl">
+        <h1 className="max-w-xl text-3xl capitalize text-white sm:text-5xl md:max-w-2xl lg:max-w-3xl xl:text-7xl">
           Helping your business succeed.
         </h1>
       </div>
