@@ -1,4 +1,5 @@
 import CaseStudies from '@/components/case-studies';
+import CtaSection from '@/components/cta-section';
 import Hero from '@/components/hero';
 import LogoCloud from '@/components/logo-cloud';
 import PracticeAreas from '@/components/practice-areas';
@@ -23,6 +24,7 @@ const HomePage = () => {
         recommend them!
       </Testimonial>
       <PracticeAreas />
+      <CtaSection />
     </div>
   );
 };
