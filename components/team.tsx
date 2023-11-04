@@ -15,7 +15,7 @@ const people = [
 
 const Team = () => {
   return (
-    <div className="mt-8 bg-white md:mt-0">
+    <div className="mt-16 bg-white md:mt-8">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Meet the Partners
