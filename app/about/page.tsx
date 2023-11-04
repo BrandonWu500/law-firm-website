@@ -29,7 +29,7 @@ const articles = [
 
 const AboutPage = () => {
   return (
-    <div className="space-y-6">
+    <div className="space-y-24 sm:space-y-32 lg:space-y-40">
       <div className="relative aspect-square w-screen sm:h-[60vh]">
         <Image
           src={imageOffice}
@@ -45,11 +45,11 @@ const AboutPage = () => {
         </Container>
       </div>
 
-      <ul className="flex flex-col lg:hidden">
+      <ul className="flex flex-col gap-24 sm:gap-32 lg:hidden">
         {articles.map((article) => (
           <li key={article.title}>
-            <Container className="flex flex-col items-center justify-center gap-6 sm:mt-4">
-              <h2 className="mr-auto mt-16 text-2xl font-medium capitalize sm:text-3xl">
+            <Container className="flex flex-col items-center justify-center gap-6">
+              <h2 className="mr-auto text-2xl font-medium capitalize sm:text-3xl">
                 {article.title}
               </h2>
               <div className="relative aspect-video w-full">
@@ -66,12 +66,12 @@ const AboutPage = () => {
         ))}
       </ul>
 
-      <ul className="hidden flex-col lg:flex lg:gap-12">
+      <ul className="hidden flex-col lg:flex lg:gap-40">
         {articles.map((article, index) => (
           <li key={article.title}>
             <Container
               className={twMerge(
-                'mt-12 flex flex-row items-center justify-center gap-6 gap-x-12 xl:mt-24',
+                'flex flex-row items-center justify-center gap-6 gap-x-12',
                 index % 2 === 1 && 'flex-row-reverse'
               )}
             >
@@ -84,7 +84,7 @@ const AboutPage = () => {
                 />
               </div>
               <div className="flex flex-1 flex-col gap-6">
-                <h2 className="mr-auto mt-0 text-2xl font-medium capitalize sm:text-3xl xl:text-4xl">
+                <h2 className="mr-auto text-2xl font-medium capitalize sm:text-3xl xl:text-4xl">
                   {article.title}
                 </h2>
                 <p>{article.body}</p>
