@@ -1,6 +1,7 @@
 import CaseStudies from '@/components/case-studies';
 import Hero from '@/components/hero';
 import LogoCloud from '@/components/logo-cloud';
+import PracticeAreas from '@/components/practice-areas';
 import Team from '@/components/team';
 import Testimonial from '@/components/testimonial';
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg';
@@ -21,6 +22,7 @@ const HomePage = () => {
         really appreciated how invested they were in our business. Highly
         recommend them!
       </Testimonial>
+      <PracticeAreas />
     </div>
   );
 };
