@@ -9,7 +9,7 @@ import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg';
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen pb-16 lg:pb-24">
+    <div>
       <Hero />
       <Team />
       <LogoCloud />
