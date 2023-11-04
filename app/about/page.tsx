@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import { Container } from '@/components/layout/container';
 
+import CtaSection from '@/components/cta-section';
 import { twMerge } from 'tailwind-merge';
 import imageColumbiaUniversity from '/public/columbia-university.jpg';
 import imageHarveyRoss from '/public/harvey-ross.jpg';
@@ -101,6 +102,10 @@ const AboutPage = () => {
           </li>
         ))}
       </ul>
+
+      <div>
+        <CtaSection />
+      </div>
     </div>
   );
 };
