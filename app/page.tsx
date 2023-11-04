@@ -1,3 +1,4 @@
+import CaseStudies from '@/components/case-studies';
 import Hero from '@/components/hero';
 import LogoCloud from '@/components/logo-cloud';
 import Team from '@/components/team';
@@ -8,6 +9,7 @@ const HomePage = () => {
       <Hero />
       <Team />
       <LogoCloud />
+      <CaseStudies />
     </div>
   );
 };
