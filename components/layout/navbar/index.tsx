@@ -9,7 +9,7 @@ import responsiveLogo from '/public/responsive-logo.svg';
 
 const navigation = [
   { title: 'Home', path: '/' },
-  { title: 'Who We Are', path: '/who-we-are' },
+  { title: 'Who We Are', path: '/about' },
   { title: 'Blog', path: '/blog' },
 ];
 
