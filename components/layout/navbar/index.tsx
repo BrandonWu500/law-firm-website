@@ -25,7 +25,7 @@ const Navbar = () => {
           <Image src={responsiveLogo} alt="" className="h-10 w-auto" />
         </Link>
       </div>
-      <div className="hidden lg:flex lg:flex-1" aria-hidden="true">
+      <div className="hidden lg:flex lg:flex-1">
         <Link href="/" className="-m-1.5 p-1.5">
           <Image src={fullLogo} alt="" className="h-14 w-auto" />
         </Link>
