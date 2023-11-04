@@ -18,7 +18,7 @@ export function Container<T extends React.ElementType = 'div'>({
     <Component
       className={twMerge('mx-auto max-w-screen-xl px-6 lg:px-8', className)}
     >
-      <div className="mx-auto max-w-2xl lg:max-w-none">{children}</div>
+      {children}
     </Component>
   );
 }
