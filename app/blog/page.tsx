@@ -5,11 +5,12 @@ import CtaSection from '@/components/cta-section';
 import { Border } from '@/components/layout/border';
 import { Container } from '@/components/layout/container';
 import { PageIntro } from '@/components/page-intro';
+import Time from '@/components/time';
 import { Button } from '@/components/ui/button';
 
-import Time from '@/components/time';
 import imageHarveyRoss from '/public/harvey-ross.jpg';
 import imageMikeSpecter from '/public/mike-specter.jpg';
+import imagePenAndNotebook from '/public/pen-and-notebook.jpg';
 
 const articles = [
   {
@@ -41,12 +42,7 @@ const articles = [
 const BlogPage = () => {
   return (
     <>
-      <PageIntro eyebrow="Blog" title="The latest articles and news">
-        <p>
-          Stay up-to-date with the latest industry news as our marketing teams
-          finds new ways to re-purpose old CSS tricks articles.
-        </p>
-      </PageIntro>
+      <PageIntro image={imagePenAndNotebook} title="Blog" />
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <div className="space-y-24 lg:space-y-32">
