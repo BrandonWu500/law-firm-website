@@ -12,7 +12,7 @@ const CtaSection = () => {
               Tell us about your business
             </h2>
             <div className="mt-6 flex">
-              <Button href="/contact-us" invert>
+              <Button href="/contact" invert>
                 Let’s Talk
               </Button>
             </div>
