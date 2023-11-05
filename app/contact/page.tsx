@@ -3,12 +3,12 @@ import ContactForm from '@/components/contact/form';
 import { Container } from '@/components/layout/container';
 import { PageIntro } from '@/components/page-intro';
 
+import imageStateOfLiberty from '/public/statue-of-liberty.jpg';
+
 const ContactPage = () => {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
-        <p>We can’t wait to hear from you.</p>
-      </PageIntro>
+      <PageIntro image={imageStateOfLiberty} title="Contact Us" />
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">

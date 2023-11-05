@@ -1,9 +1,11 @@
 import Image from 'next/image';
+import { twMerge } from 'tailwind-merge';
 
 import { Container } from '@/components/layout/container';
 
 import CtaSection from '@/components/cta-section';
-import { twMerge } from 'tailwind-merge';
+import { PageIntro } from '@/components/page-intro';
+
 import imageColumbiaUniversity from '/public/columbia-university.jpg';
 import imageHarveyRoss from '/public/harvey-ross.jpg';
 import imageMikeSpecter from '/public/mike-specter.jpg';
@@ -30,20 +32,7 @@ const articles = [
 const AboutPage = () => {
   return (
     <div className="space-y-24 sm:space-y-32 lg:space-y-40">
-      <div className="relative aspect-square w-screen sm:h-[60vh]">
-        <Image
-          src={imageOffice}
-          alt=""
-          className="-z-10 object-cover"
-          fill
-          priority
-        />
-        <Container className="flex h-full items-center">
-          <h1 className="max-w-xl text-4xl capitalize text-white sm:text-5xl md:max-w-2xl lg:max-w-3xl xl:text-7xl">
-            Who we are
-          </h1>
-        </Container>
-      </div>
+      <PageIntro image={imageOffice} title="Who We Are" />
 
       <ul className="flex flex-col gap-24 sm:gap-32 lg:hidden">
         {articles.map((article) => (

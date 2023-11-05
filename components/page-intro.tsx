@@ -1,45 +1,21 @@
 import { Container } from '@/components/layout/container';
-import { twMerge } from 'tailwind-merge';
+import Image, { ImageProps } from 'next/image';
 
 export function PageIntro({
-  eyebrow,
+  image,
   title,
-  children,
-  centered = false,
 }: {
-  eyebrow: string;
+  image: ImageProps['src'];
   title: string;
-  children: React.ReactNode;
-  centered?: boolean;
 }) {
   return (
-    <Container
-      className={twMerge('mt-24 sm:mt-32 lg:mt-40', centered && 'text-center')}
-    >
-      <div>
-        <h1>
-          <span className="block text-base font-semibold uppercase text-neutral-950">
-            {eyebrow}
-          </span>
-          <span className="sr-only"> - </span>
-          <span
-            className={twMerge(
-              'font-display mt-6 block max-w-5xl text-5xl font-medium capitalize tracking-tight text-neutral-950 [text-wrap:balance] sm:text-6xl',
-              centered && 'mx-auto'
-            )}
-          >
-            {title}
-          </span>
+    <div className="relative aspect-square w-screen sm:h-[60vh]">
+      <Image src={image} alt="" className="-z-10 object-cover" fill priority />
+      <Container className="flex h-full items-center">
+        <h1 className="max-w-xl text-4xl capitalize text-white sm:text-5xl md:max-w-2xl lg:max-w-3xl xl:text-7xl">
+          {title}
         </h1>
-        <div
-          className={twMerge(
-            'mt-6 max-w-3xl text-xl text-neutral-600',
-            centered && 'mx-auto'
-          )}
-        >
-          {children}
-        </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 }
