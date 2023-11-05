@@ -9,7 +9,7 @@ const navigation = [
   { title: 'Home', path: '/' },
   { title: 'Who We Are', path: '/about' },
   { title: 'Blog', path: '/blog' },
-  { title: 'Contact Us', path: '/contact-us' },
+  { title: 'Contact Us', path: '/contact' },
 ];
 
 const Footer = () => {
