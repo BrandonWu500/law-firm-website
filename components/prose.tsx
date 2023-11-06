@@ -1,10 +1,15 @@
 import { twMerge } from 'tailwind-merge';
 
 type Props = {
-  children: React.ReactNode;
+  html: string;
   className?: string;
 };
-const Prose = ({ children, className }: Props) => {
-  return <article className={twMerge('prose', className)}>{children}</article>;
+const Prose = ({ html, className }: Props) => {
+  return (
+    <div
+      className={twMerge('prose', className)}
+      dangerouslySetInnerHTML={{ __html: html as string }}
+    />
+  );
 };
 export default Prose;
